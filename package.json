@@ -1,0 +1,15 @@
+{
+  "name": "typescript-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Domains18/typescript-monorepo.git",
+  "author": "Gibsons Gibson <gibsonsgibson88@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^7.1.5"
+  }
+}
