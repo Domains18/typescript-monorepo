@@ -2,9 +2,15 @@ import express from 'express';
 const app = express();
 const port = 5000;
 
+export interface QueryPayload{
+    foo: string
+}
 
-app.get('/', (req, res) => {
-    res.json('Hello World!');
+app.get('/data', (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*")
+    res.json({ foo: "successful!!" });
+    res.json({ fooo: "successful!!" });
+    
 });
 
 

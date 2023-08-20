@@ -1,9 +1,19 @@
 import React from 'react'
+import { QueryPayload} from 'monorepo-typescript/src/server'
+
+
+
 
 const App = () => {
   return (
     <div>
-      <button>Click Me</button>
+      <button
+        onClick={() => {
+          fetch("http://localhost:5000/data", {})
+            .then((response) => response.json())
+            .then((data: QueryPayload)=> console.log(data.foo))
+        }}
+      >Click Me</button>
       {
         <style>
           {`
